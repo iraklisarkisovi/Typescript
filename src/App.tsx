@@ -1,4 +1,3 @@
-
 import './App.css';
 import Layout from './Layouts/Mainlayout';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -7,16 +6,16 @@ import Fact from './Pages/fact';
 import Wildcard from './Pages/Wildcard';
 import About from './Pages/about';
 
-function App() {
+const App: React.FC = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Layout />}>
-          <Route index element={<Mainpage/>}/>
-          <Route path='/:factId' element={<Fact/>}/>
-          <Route path='/About' element={<About/>}></Route>
+          <Route index element={<Mainpage />} />
+          <Route path='/:factId' element={<Fact />} />
+          <Route path='/About' element={<About />} />
         </Route>
-        <Route path='*' element={<Wildcard/>} />
+        <Route path='*' element={<Wildcard />} />
       </Routes>
     </BrowserRouter>
   );
